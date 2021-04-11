@@ -1,0 +1,87 @@
+<footer>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="contact-left">
+
+                        <h3>THE CODE WALK (Youtube)</h3>
+                        <p>We believe in <strong>Simple</strong>, <strong>Clean</strong> & <strong>Modern</strong> Design Standards with Responsive Approach. Browse the amazing work of our company.</p>
+
+                        <div id="contact-info">
+
+                            <address>
+                                <strong>Headquarters:</strong><br>
+                                <p>221 Jockey Hollow, Suite 600<br>
+                                Smithtown, NY 11787</p>
+                            </address>
+                            <div id="phone-fax-email">
+                                <p>
+                                    <strong>Phone:</strong><span> (+91) 9616148837 </span> <br>
+                                    <strong>Email:</strong><span>  aspper20@gmail.com  </span> <br>
+                                </p>
+                            </div>
+
+                        </div>
+                        <ul class="social-list">
+                            <li><a href="#" class="social-icon icon-white"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="social-icon icon-white"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="social-icon icon-white"><i class="fa fa-youtube-play"></i></a></li>
+                            <li><a href="#" class="social-icon icon-white"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="contact-right">
+
+                        <h3>Contact Me</h3>
+                        <form action="#">
+
+                            <input type="text" name="full-name" placeholder="Full Name" class="form-control">
+                            <input type="text" name="email" placeholder="Email Address" class="form-control">
+                            <textarea rows="5" name="message" placeholder="Message..." class="form-control"></textarea>
+
+                            <div id="send-btn">
+                                <a class="btn btn-lg btn-general btn-white" href="#" role="button">SEND</a>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div id="footer-copyrights">
+                        <p>Copyrights &copy; 2021 All Rights Reserved.</p>
+                    </div>
+
+                </div>
+                <div class="col-md-6 hidden-sm hidden-xs">
+                    <div id="footer-menu">
+                        <ul>
+                            <li><a href={% url 'home' %}>Home</a>/</li>
+                            <li><a href={% url 'about' %}>About Me</a>/</li>
+                            <li><a href={% url 'skills' %}>Skills</a>/</li>
+                            <li><a href={% url 'blogs:list' %}>Blog</a>/</li>
+                            <li><a href={% url 'projects:list' %}>Project</a>/</li>
+                            <li><a href={% url 'contact' %}>Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#home" id="back-to-top" class="btn btn-sm btn-blue btn-back-to-top smooth-scroll hidden-sm hidden-xs" title="home" role="button">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</footer>

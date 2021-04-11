@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- required meta tags -->
+    <meta charset="utf-8">
+    
+    <meta name="description" content="Building modern responsive website with html5, css3, jQuery & bootstrap framework">
+    <meta name="keywords" content="HTML5, CSS3, jQuery, Bootstrap, Web Design, Web Development, Responsive website, Modern website">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- title -->
+    <title>Amitprafull.com - About</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    {% include 'partials/styles.html' %}
+</head>
+
+<body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="65">
+
+    {% include 'partials/navbar.html' %}
+    <!-- Home -->
+    <section id="home">
+
+        <div id="home-cover" class="bg-parallax animated fadeIn">
+
+            <div id="home-content-box">
+
+                <div id="home-content-box-inner" class="text-center">
+
+                    <div id="home-heading" class="animated zoomIn">
+                        <h3>About Me</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- About -->
+    <section id="about">
+
+        <!-- About right side with diagonal BG parallax -->
+        <div id="about-bg-diagonal" class="bg-parallax"></div>
+
+        <!-- About left side with content -->
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-4">
+
+                    <div id="about-content-box">
+
+                        <div id="about-content-box-outer">
+
+                            <div id="about-content-box-inner">
+
+                                <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                                    <h3> About Vesco </h3>
+                                    <div class="content-title-underline"></div>
+                                </div>
+
+                                <div id="about-desc" class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                                    <p>Magna arbitror et dolor amet, fabulas do noster non eu mentitum praesentibus e est ex quid cupidatat. Dolore reprehenderit probant quorum tempor, illum hic ut illum pariatur. Qui o magna aute labore.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    {% include 'partials/footer.html' %}
+    {% include 'partials/scripts.html' %}
+</body>
+
+</html>

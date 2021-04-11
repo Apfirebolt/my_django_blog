@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- required meta tags -->
+    <meta charset="utf-8">
+    
+    <meta name="description" content="Building modern responsive website with html5, css3, jQuery & bootstrap framework">
+    <meta name="keywords" content="HTML5, CSS3, jQuery, Bootstrap, Web Design, Web Development, Responsive website, Modern website">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- title -->
+    <title>Amitprafull.com</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    {% include 'partials/styles.html' %}
+</head>
+
+<body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="65">
+
+    {% include 'partials/navbar.html' %}
+    <!-- Home -->
+    <section id="home">
+
+        <div id="home-cover" class="bg-parallax animated fadeIn">
+
+            <div id="home-content-box">
+
+                <div id="home-content-box-inner" class="text-center">
+
+                    <div id="home-heading" class="animated zoomIn">
+                        <h3>Posts</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <div class="content-title wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+        <h3> BLOG </h3>
+        <div class="content-title-underline"></div>
+        <p>
+            Lorem ipsum dolor sit, amet conste repellat cum commodi iure, tenetur nobis officiis sint sit!
+        </p>
+    </div>
+    {% for post in posts %}
+    <section id="testimonials">
+        <div id="testimonials-cover">
+            <div class="content-box">
+                <div class="content-title content-title-white wow animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                    <h3> {{ post.title }} </h3>
+                    <p class="text-primary">
+                        {{ post.content }}
+                    </p>
+                    <div id="home-btn" class="animated zoomIn text-center">
+                        <a class="btn btn-lg btn-general btn-white" href={% url 'blogs:detail' pk=post.id %} role="button" title="View Our Work">View Post</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row wow animated slideInLeft" data-wow-duration="1s" data-wow-delay=".5s">  
+                        <div class="col-md-12">
+                            <div id="customers-testimonials" class="text-center owl-carousel owl-theme">
+                                {% for each_image in post.all_post_images.all %}
+                                <div class="testimonial">
+                                    <img src="{{ each_image.image.url }}" class="img-responsive img-rounded" alt="Post image not available">
+                                    <p>
+                                        {{ each_image.title }}
+                                    </p>
+                                    <blockquote>
+                                        {{ each_image.description }}
+                                    </blockquote>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Content Box -->
+        </div>
+    </section>
+    {% endfor %}
+
+    {% include 'partials/footer.html' %}
+    {% include 'partials/scripts.html' %}
+</body>
+
+</html>
